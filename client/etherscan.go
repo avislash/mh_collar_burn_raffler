@@ -3,6 +3,7 @@ package client
 import (
 	"context"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -130,6 +131,8 @@ func (ec *EtherscanClient) QueryEtherscanTransactions(start, end time.Time, addr
 	if err != nil {
 		return []etherscan.NormalTx{}, fmt.Errorf("Unable to query Stopping Block Number from Etherscan: %w", err)
 	}
+
+	log.Printf("Querying for Txns between blocks %d and %d", startBlock, stopBlock)
 
 	txns, err := ec.NormalTxByAddress(address, &startBlock, &stopBlock, 0, 0, false)
 	if err != nil {
