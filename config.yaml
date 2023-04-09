@@ -2,8 +2,8 @@ max_winners: 3
 metadata_endpoint: https://api.mutantdao.com/hounds/metadata
 etherscan_rate_limit: 4
 snapshot: 
-    start: 2023-04-09T12:44:59Z #RC3339 YY-MM-DDTHH:MM:SS
-    stop:  2023-04-09T12:45:00Z #RC3339 YY-MM-DDTHH:MM:SS
+    start: 2023-04-02T00:00:00Z #RC3339 YY-MM-DDTHH:MM:SS
+    stop:  2023-04-03T16:00:00Z #RC3339 YY-MM-DDTHH:MM:SS
 ineligible_traits:
    forms: 
        - Fire 
